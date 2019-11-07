@@ -8,11 +8,17 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    if(msg.content ==='ping') {
-        msg.reply('pong');
+    if(msg.content.toLowerCase() ==='ping') {
+        msg.reply('ping');
     }
-    if(msg.content ==='hello'){
-        msg.reply('HELLO\nhello\nhello')
+    if(msg.content.toLowerCase() ==='hello'){
+        msg.reply('HELLO\nhello\nhello');
+    }
+    if(msg.content.toLowerCase() === 'hi'){
+        msg.reply('hello');
+    }
+    if(msg.content.toLowerCase() === 'haha'){
+        msg.reply('hahahaha')
     }
 });
 
