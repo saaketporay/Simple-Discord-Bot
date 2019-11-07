@@ -4,6 +4,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var counter = 0;
+var num1;
+var num2;
 
 client.on('ready', () => {
     console.log('Logged in as ${client.user.tag}!');
@@ -29,7 +31,30 @@ client.on('message', msg => {
         counter++;
         msg.reply(counter)
     }
+    if(msg.content === 'sumCalc'){
+        add(num1,num2);
+    }
+    
 
+    function add(p1,p2)
+    {
+        msg.reply(p1+p2)
+    }
+
+    switch(msg.content)
+    {
+        case 1: 
+            num1 = 1;
+            break;
+        case 2:
+            num2 = 2;
+            break;
+        default:
+            num1=0;
+            num2=0;
+            break;
+
+    }
 
 });
 
